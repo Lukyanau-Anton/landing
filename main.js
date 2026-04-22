@@ -21,7 +21,8 @@
 
     if (diff <= 0) {
       const stillToday = now < DAY_END_UTC;
-      cdRoot.outerHTML = `<p class="cd-done">${stillToday ? "уже сегодня 🤍" : "уже поженились 🤍"}</p>`;
+      const label = stillToday ? "уже сегодня" : "уже поженились";
+      cdRoot.outerHTML = `<p class="cd-done">${label} <span aria-hidden="true">🤍</span></p>`;
       return;
     }
 
@@ -35,7 +36,7 @@
   }
 
   renderCountdown();
-  setInterval(renderCountdown, 30_000);
+  setInterval(renderCountdown, 60_000);
 
   // ——— Scroll reveal ———
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
