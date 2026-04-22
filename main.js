@@ -55,48 +55,4 @@
 
     revealEls.forEach(el => io.observe(el));
   }
-
-  // ——— Add to calendar (.ics) ———
-  const ics = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Sonya & Anton//Wedding 2026//RU",
-    "CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH",
-    "BEGIN:VEVENT",
-    "UID:ceremony-sa-20260523@wedding.invite",
-    "DTSTAMP:20260101T000000Z",
-    "DTSTART:20260523T080000Z",
-    "DTEND:20260523T090000Z",
-    "SUMMARY:Свадьба Сони и Антона — церемония",
-    "LOCATION:ЗАГС Центрального района, Минск",
-    "DESCRIPTION:Приезжать к 10:40. Церемония + Зал шампанского ≈ 1 час.",
-    "END:VEVENT",
-    "BEGIN:VEVENT",
-    "UID:reception-sa-20260523@wedding.invite",
-    "DTSTAMP:20260101T000000Z",
-    "DTSTART:20260523T150000Z",
-    "DTEND:20260523T210000Z",
-    "SUMMARY:Свадьба Сони и Антона — вечер",
-    "LOCATION:bar Babe, Кальварийская 21, Минск",
-    "DESCRIPTION:Не позже 18:10. До 00:00.",
-    "END:VEVENT",
-    "END:VCALENDAR",
-    ""
-  ].join("\r\n");
-
-  const btn = document.getElementById("add-to-calendar");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "sonya-anton-wedding.ics";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 1500);
-    });
-  }
 })();
