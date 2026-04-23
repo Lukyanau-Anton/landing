@@ -319,14 +319,15 @@ h3 {
   border-radius: 999px;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #EFE9DE;
   text-align: center;
 }
 
 .pill-accent {
   color: #F2F7FB;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .dress { text-align: center; }
