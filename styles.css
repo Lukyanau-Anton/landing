@@ -455,6 +455,15 @@ h3 {
   margin-top: 2rem;
 }
 
+.postscript {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+}
+
 /* ——— scroll reveal ——— */
 
 [data-reveal] {
