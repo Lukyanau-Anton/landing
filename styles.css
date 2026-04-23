@@ -313,14 +313,20 @@ h3 {
 .pill {
   display: inline-block;
   margin: 1.75rem auto 0;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid var(--taupe);
+  padding: 0.65rem 1.3rem;
+  background: var(--ink);
+  border: 1px solid var(--ink);
   border-radius: 999px;
   font-family: var(--serif);
   font-style: italic;
   font-size: 1.05rem;
-  color: var(--taupe-deep);
+  color: #EFE9DE;
   text-align: center;
+}
+
+.pill-accent {
+  color: #F2F7FB;
+  font-weight: 500;
 }
 
 .dress { text-align: center; }
